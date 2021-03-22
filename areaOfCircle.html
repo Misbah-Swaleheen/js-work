@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+    margin: 15px ;
+    border: 2px solid white;
+    
+    /* box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.5); */
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 2px 2px rgba(58, 58, 58, 0.7);
+   
+    color: white;
+        background-color: rgb(231, 65, 121);
+}
+.btn:hover{
+    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.btn, .input{
+    border-radius: 10px;
+    outline: none; 
+}
+.btn, .input, .label, .para{
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.input{
+    height:33px;
+    box-shadow: inset 1px 1px 1px 1px rgba(58, 58, 58, 0.4);
+    margin-left: 5px;
+}
+    </style>
+</head>
+<body>
+    <label for="rad" class="label">Radius: </label><input type="number"   id="rad" class="input">
+    <input type="button" class="btn " name="submit" id="btn" onclick="submit()" value="Submit">
+    <p id="para" class="para"></p>
+    <script>
+        function submit(){
+        var x = document.getElementById("rad").value;
+        var a= Math.PI *x*x;
+        var y = document.getElementById('para').innerHTML = "Your Answer is: " + a ;
+        
+        
+        }
+    </script>
+</body>
+</html>

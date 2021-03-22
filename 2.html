@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 20px;
+            background-color: whitesmoke;
+            border: 1px solid black;
+
+        }
+        button{
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <button onclick="showTime()"> Click</button>
+    <script>
+        // var a =Math.log(2)
+        // console.log(a)
+
+        // var b = Math.random();
+        // console.log(10+(b *100));
+
+
+        // var c = Math.round(25.51);
+        // console.log(c);
+
+        // var d = Math.floor(25.51)
+        // console.log(d);
+
+        // var e = Math.PI;
+        // console.log(e);
+
+
+        // var d = new Date();
+        // console.log(d)    
+
+        function showTime(){
+            var div  =document.getElementById('div');
+            var d = new Date()
+            div.innerHTML = d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds();
+        }    
+    </script>
+
+</body>
+</html>

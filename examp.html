@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea  onkeyup="getLineNumberAndColumnIndex(this);" onmouseup="this.onkeyup();" >
+    </textarea>
+    
+   <script>
+        function getLineNumberAndColumnIndex(textarea){
+         var textLines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+         var currentLineNumber = textLines.length;
+         var currentColumnIndex = textLines[textLines.length-1].length;
+         console.log("Current Line Number "+ currentLineNumber+" Current Column Index "+currentColumnIndex );
+      }
+   </script>
+</body>
+</html>

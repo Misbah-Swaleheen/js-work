@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <textarea   rows="15" cols="30">
+    </textarea>
+    
+   <script>
+
+
+    $(document).ready(function () {
+    //     function getLineNumberAndColumnIndex(textarea){
+    //      var textLines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+    //      var currentLineNumber = textLines.length;
+    //      var currentColumnIndex = textLines[textLines.length-1].length;
+    //     // console.log("Current Line Number "+ currentLineNumber+" Current Column Index "+currentColumnIndex );
+          
+    // }
+
+    // var i= 0;
+    // while($('textarea').attr('rows') != null){
+    //     $('textarea').on('keypress',function(e) {
+    // if(e.which == 13) {
+    //     alert('User pressed Enter!');
+    // }
+    var i= 1;
+    $('textarea').val(i + "   " ); 
+
+$('textarea').on('keyup',function(e) {
+    if(e.which == 13) {
+
+$('textarea').val($('textarea').val() + ++i + "   " ); 
+     }
+    
+    })  
+    });
+   </script>
+</body>
+</html>

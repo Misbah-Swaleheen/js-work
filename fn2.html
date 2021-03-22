@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+             .btn{
+    margin: 15px 13%;
+    border: 2px solid white;
+    
+    /* box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.5); */
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 2px 2px rgba(58, 58, 58, 0.7);
+    display: block;
+    color: white;
+        background-color: rgb(231, 65, 121);
+        
+}
+.btn:hover{
+    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.btn, .input{
+    border-radius: 10px;
+    outline: none; 
+}
+.btn, .input, .label, .para{
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.input{
+    height:33px;
+    box-shadow: inset 1px 1px 1px 1px rgba(58, 58, 58, 0.4);
+    margin-left: 5px;
+    padding-left: 8px;
+    
+}
+    </style>
+</head>
+<body>
+    <label for="num" class="label">Input: </label>
+    <input type="number" id="num" class="input" placeholder="Enter number">
+    <button onclick="input()" class="btn">
+        Click me
+    </button>
+    <div class="para" id="para">
+
+    </div>
+    <script>
+        var inpt = document.getElementById('num');
+        var display = document.getElementById('para');
+        function input(){
+           display.innerText= cube(inpt.value);
+           inpt.focus()
+        }
+
+        
+        // var res = function (number){
+        //     return number *number ;
+        // }
+        // console.log(res(4))
+
+        function cube(number){
+            
+            return number *number * number ;
+        }
+        
+        // function write(fn){
+        //     fn()
+        // }
+        
+        // write(function(){
+        //     console.log("Hello Misbah")
+        // })
+
+        // write(() => {
+        //     document.write("Hello World")
+        // })
+    </script>
+</body>
+</html>
