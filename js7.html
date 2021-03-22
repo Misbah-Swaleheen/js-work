@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #content {
+            /* height: 8000px; */
+            height: 8000px;
+            background-color: greenyellow;
+            position: relative;
+            /* margin-top: 200px; */
+        }
+
+        #box {
+            height: 200px;
+            background-color: red;
+            position: fixed;
+            top: 1%0;
+            right: 0;
+            z-index: 500;
+            width: 30%;
+            display: none;
+            /* position: absolute;
+           
+            z-index: 500;
+        } */
+        }
+    </style>
+    <script>
+
+        function scroller() {
+
+
+            if (window.scrollY > 600) {
+                document.getElementById('box').style.display = "block";
+            }
+            else {
+                document.getElementById('box').style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body onscroll="scroller()">
+    <div>
+        <div id="box"></div>
+        <div id="content"></div>
+    </div>
+</body>
+
+</html>

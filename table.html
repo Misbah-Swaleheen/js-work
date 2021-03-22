@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table{
+            /* width: 100%;
+            text-align: center;
+            height: 500px ; */
+            background-color:beige;
+            text-align: center;
+        }
+        th{
+             background-color: cadetblue;
+             
+        }
+       
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr> 
+            <th> No.  </th>
+            <th> Name  </th>
+           
+            <th> Tecnology </th>
+            <th> Display  </th>
+            <th> Battery </th>
+            <th> Camera</th>
+            <th> Storage </th>
+            <th> Price </th>
+        </tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+<tr class="row"></tr>
+    </table>
+        <script>
+        
+var mobiles = [
+               { No: 1 ,Name:"sumsung Galaxy z fold" , Tecnology: "GSM / CDMA / HSPA / EVDO / LTE / 5G",  Display:7.6,Battery:"5000 mAh", Camera :"12 MP + 12 MP + 12 MP",Storage: "256 GB 12 GB RAM", Price: "RS: 339,000"},
+             { No: 2 , Name:"sumsung Galaxy fold" , Tecnology: " GSM / HSPA / LTE",  Display:7.3 ,  Battery :"5000 mAh",  Camera :"12 MP + 12 MP + 16 MP", Storage: "256 GB 6 GB RAM", Price:"RS: 339,000"},
+             { No:3, Name : "sumsung Galaxy note 20 ultra" , Tecnology: "GSM / CDMA / HSPA / EVDO / LTE",  Display:6.9,Battery:"4500 mAh", Camere : "108 MP+ 12MP +12MP",Storage:"512 GB 8 GB RAM", Price: "RS: 219,999"},
+             { No:4, Name : "sumsung Galaxy Note 20 plus" , Tecnology:"GSM / CDMA / HSPA / EVDO / LTE",Display: 6.9,Battery:"5000 mAh ", Camera:" 108 MP+ 12MP +16MP + 16MP" ,Storage:"512 GB 12 GB RAM",Price:"RS: 189,999" },
+         
+             {No:5, Name : "sumsung Galaxy Note 8", Tecnology:"GSM / CDMA / HSPA / EVDO / LTE / 5G",Display:6.3,Battery:"3300 mAh", Camera:"12 MP + 12 MP", Storage:"	GB 12 GB RAM" ,Price:"RS: 339,000"},
+             {No:6, Name : "sumsung GalaxyA21S", Tecnology:"GSM / HSPA / LTE",Display: 6.5,Battery:"5000 mAh", Camera:"48 MP+ 8MP +4MP + 1MP", Storage:"64 GB 6 GB RAM" ,Price:"RS: 189,999"},
+             {No:7, Name : "sumsung Galaxy J7 Core", Tecnology:"SIM1: GSM 850 / 900 / 1800 / 1900 SIM2: GSM 850 / 900 / 1800 / 1900",Display: 5.5,Battery:"3000 mAh	", Camera:"13 MP", Storage:"32 GB 3 GB RAM" ,Price:"RS: 18,999"},
+             {No:8, Name : " huawei	Honor 7c", Tecnology:"GSM / CDMA / HSPA / EVDO / LTE",Display: 6.9,Battery:"4500 mAh", Camera:"108 MP+ 12MP +12MP", Storage:"512 GB 8 GB RAM" ,Price:"RS: 219,999"},
+             {No:9, Name : "Huawei Honor 6x", Tecnology:"GSM / CDMA / HSPA / EVDO / LTE / 5G",Display: 7.6,Battery:"4500 mAh", Camera:"12 MP + 12 MP + 12 MP", Storage:"256 GB 12 GB RAM" ,Price:"RS: 339,000"},
+             {No:10, Name : " Huawei Honor 7", Tecnology:"GSM / HSPA / LTE",Display: 7.3,Battery:"4380 mAh	", Camera:"12 MP + 12 MP 16 MP", Storage:"256 GB 6 GB RAM" ,Price:"	RS: 339,000"}]
+
+var tr = document.getElementsByClassName('row');
+     console.log(tr)
+     for (var i=0 ; i<tr.length ; i++ ){
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].No));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Name));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Tecnology));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Display));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Battery));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Camera));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Storage));
+         tr[i].appendChild(document.createElement("td")).appendChild(document.createTextNode(mobiles[i].Price));
+        }
+
+        </script>
+
+
+   
+</body>
+</html>

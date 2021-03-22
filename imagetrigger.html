@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .sec2 ul li a img{
+           height: 50px;
+       }
+       .sec{
+           height: 200px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="sec2">
+        <i class="fa fa-share-alt icons" aria-hidden="true"></i>
+        <i class="fa fa-heart-o icons" aria-hidden="true"></i>
+
+        <ul>
+            <li><img src="Images/51.jpg" alt="" onclick="myfunction(this)" id="one"></li>
+            <li><a href=""><img src="Images/12.jpg" alt="" onclick="myfunction(this)" id="two"></a></li>
+            <li><a href=""><img src="Images/21b.jpg" alt="" onclick="myfunction(this)" id="three"></a></li>
+            <li><a href=""><img src="Images/22c.jpg" alt="" onclick="myfunction(this)" id="imag" class="four"></a>
+            </li>
+        </ul>
+    </div>
+
+    <img src="" alt="" class="sec3" id="image">
+
+    <script>
+        function myfunction(a) {
+            
+         document.getElementById('image').src = a.src;
+    
+
+        }
+    </script>
+</body>
+
+</html>

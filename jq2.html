@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: blueviolet;
+            border-radius: 50%;
+            margin: 5% 2%;
+            position: absolute;
+            
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <script>
+        // $(document).ready(function() {
+        //     $('button').click(function () {
+        //         $('h1').html("Ali")
+        //     });
+        // });
+
+        $(document).ready(function() {
+            $('button').click(function () {
+              $('div').animate({left: '700px', width: '200px', height: '200px'}, 3000).animate({top: '500px', width: '250px', height: '250px'}, 3000).animate({left: '0px', width: '200px', height: '200px'}, 3000).animate({top: '50px', width: '150px', height: '150px'}, 3000);
+            });
+        });
+    </script>
+    <div></div>
+    <button>
+        show
+    </button>
+</body>
+</html>

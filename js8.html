@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .show{
+            display: block;
+            transition: all 2s ease-in;
+            /* transition-delay: 10ms; */
+         
+        }
+        .hide{
+            display: none;
+            transition: all 2s ease-out ;
+            transition-delay: 10ms;
+        }
+        div{
+            height: 8000px;
+            background-color: rgba(58,58,58,.5);
+        }
+        img{
+            height: 250px;
+                display: none;
+            position: fixed;
+            left: 10%;
+            top:5%
+        }
+    </style>
+</head>
+<body onscroll="scroller()" >
+    <div >
+        <img src="Images/apple1.png" alt="" id="img" class="hide">
+    </div>
+    <script>
+    
+        function scroller(){
+            var bos = document.getElementById('img');
+            if(window.scrollY >400){
+         
+               if(bos.classList.contains('hide')){
+                   bos.classList.remove('hide');
+                   bos.classList.add('show');
+               }
+           
+            }
+            else{
+        
+                   bos.classList.remove('show');
+                   bos.classList.add('hide');
+            }
+        }
+    </script>
+</body>
+</html>

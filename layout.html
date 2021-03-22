@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,700;1,700&family=IBM+Plex+Sans:wght@400;700&family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <style>
+        body{
+            background-color: rgb(2, 238, 148);
+            margin: 0;
+            padding: 0;
+        }
+        .sec1{
+            width: 50vw ;
+            height: 78vh;
+            background-color: white;
+            margin: 50px auto;
+            border-radius: 5px;
+            box-shadow: 2px 2px 15px rgba(58,58,58,0.2);
+            padding:   40px;
+            padding-top: 15px !important
+            
+            
+            
+        }
+        .sec{
+           /* border: 1px solid black;  */
+            width: 51%;
+            /* float: right; */
+            font-family: 'IBM Plex Sans', sans-serif;
+            color:rgba(58,58,58,0.4);
+           margin-left: 56%;
+
+           
+        }
+        .sec1 .sec h2{
+            font-weight: 700;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            color: #474545;
+        }
+        
+        .sec1 .sec p{
+            font-weight: normal !important;
+        
+        }
+        .space{
+            margin-top: 0px;
+            padding-top: 0px;
+            font-size: 11px;
+        }
+        .price{
+            color:crimson;
+            font-family: 'Roboto', sans-serif;
+            margin: 28px 0px;
+        }
+         .b{
+            font-size: 48px;
+            
+            padding-left: 10px;
+        }
+        .sec .list{
+            display: flex;
+            margin-left: -40px;
+            margin-bottom: 50px;
+        }
+        .sec .list li{
+            list-style-type: none;
+            
+        }
+        .sec .list li img{
+            width: 40px;
+            height:40px;
+        }
+        .image{
+            border: 1px solid black;
+        }
+        .sec .list li .image1{
+            /* width: 45px;
+            height:47px; */
+           
+            
+        }
+        .sec .list2 li{
+            color: black;
+            margin-left: -23px;
+            
+        }
+
+        button{
+            margin-left: 5px;
+            margin-top: 10px;
+            padding: 15px 65px;
+            border-radius: 10px;
+            outline: none;
+            background-color:#ff3b3b;
+            color: #fff;
+            font-weight: 800;
+            border: 1px solid #ff3b3b;
+            box-shadow: 10px 10px 30px rgba(58,58,58,0.3);
+            cursor: pointer;
+        }
+        .sec1 .sec .size{
+            font-size: 16px;
+        }
+        .sec2{
+            
+            width: 30vw;
+            height: 78vh;
+            position: absolute;
+            top: 12%;
+            left:19%;
+            background-color: 	rgb(150, 233, 27);
+            border-radius: 6px;
+            box-shadow: 10px 15px 35px rgba(58, 58, 58, 0.3);
+        }
+        .icons{
+            color: #fff;
+            font-size: 28px;
+            padding: 25px;
+            
+        }
+        .fa-share-alt{
+            font-weight: lighter;
+        }
+        .fa-heart-o{
+            float: right;
+        }
+        .sec2 ul{
+            display: flex;
+            background-color: #fff;
+            padding: 10px 0px;
+            margin-top: 80%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        
+        }
+        .sec2 ul li{
+            list-style-type: none;
+            margin: 5px 15px;
+            border: 2px solid rgba(58, 58, 58, 0.3);
+            border-radius: 5px;
+
+        }
+        .sec2 ul li img{
+            width: 60px;
+            height:60px;
+            padding:5px ;
+        }
+        .sec2 ul li .imag img{
+            padding: 10px 10px;
+        }
+        .sec2 ul li .imag img{
+            width: 50px;
+            height:50px;
+           
+        }
+        
+        .sec3{
+    
+            width: 400px;
+            height:300px;
+            position: absolute;
+            top: 23%;
+            left: 13%;
+            filter: drop-shadow(10px 20px 25px rgba(58, 58,58,0.6));
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sec1">
+        <div class="sec">
+            <h2>Delicious Apples</h2>
+            <p class="space">COD: <span class="a"> 45999 </span> </p>
+            <p class="price">R$ <span class="b"> 7.93 </span></p>
+        </div>
+        <div class="sec">
+            <p class="size">SELECT A COLOR</p>
+            <ul class="list">
+                <li class="image">
+                    <a href=""><img src="Images/green .jpeg" alt=""></a>
+                </li>
+                <li><a href=""><img src="Images/yellow.jpeg" alt=""></a></li>
+                <li><a href=""><img src="Images/red.jpeg" alt=""></a></li>
+                <li><a href=""><img src="Images/red apple.jpeg" alt="" class="image1"></a></li>
+            </ul>
+        </div>
+        <div class="sec">
+            <p class="size">BENEFITS</p>
+            <ul class="list2">
+                <li>Apples are nutricious</li>
+                <li>Apples may be good for weight loss</li>
+                <li>Apples may be good for bone health</li>
+                <li>They're linked to a lowest risk of diabetes</li>
+            </ul>
+            <button type="submit">ADD TO CART</button>
+        </div>
+    </div>
+    <div class="sec2">
+        <i class="fa fa-share-alt icons" aria-hidden="true"></i>
+        <i class="fa fa-heart-o icons" aria-hidden="true"></i>
+        <form action=""></form>
+        <label for=""></label>
+        
+        
+        <ul>
+            <li><a href=""><img src="Images/download (7).jpg" alt=""></a></li>
+            <li><a href=""><img src="Images/images (5).jpg" alt=""></a></li>
+            <li><a href=""><img src="Images/images (8).jpg" alt=""></a></li>
+            <li><a href="" class="imag"><img src="Images/down.png" alt=""></a></li>
+        </ul>
+    </div>
+    
+        <img src="Images/apple_PNG12484.png" alt=""  class="sec3">
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container {
+            margin: 5%;
+            width: 50%;
+        }
+
+        #head,
+        .ques,
+        .ans {
+            border: 1px solid rgba(58, 58, 58, .5);
+            width: 100%;
+            padding: 15px;
+            color: rgb(58, 58, 58);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        #head {
+            font-size: 22px;
+        }
+
+        .ques {
+            font-size: 18px;
+            border-top: none;
+            cursor: pointer;
+        }
+
+        .ans {
+            font-size: 18px;
+            border-top: none;
+            text-align: justify;
+            display: none;
+        }
+
+        .fa {
+            float: right;
+            font-weight: bold;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div id="head">People also ask</div>
+        <div class="ques">What is the main difference between CISC and RISC?<i class="fa fa-angle-down"
+                aria-hidden="true"></i></div>
+        <div class="ans">One of the major differences between RISC and CISC is that RISC emphasizes efficiency in cycles
+            per instruction and CISC emphasizes efficiency in instructions per program. RISC stands for Reduced
+            Instruction Set Computer Processor, a microprocessor architecture with a simple collection and highly
+            customized set of instructions. It is built to minimize the instruction execution time by optimizing and
+            limiting the number of instructions. It means each instruction cycle requires only one clock cycle, and each
+            cycle contains three parameters: fetch, decode and execute. The RISC processor is also used to perform
+            various complex instructions by combining them into simpler ones. RISC chips require several transistors,
+            making it cheaper to design and reduce the execution time for instruction.</div>
+        <div class="ques"  >What is CISC and RISC?<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div class="ans">RISC stands for Reduced Instruction Set Computer. 1. CISC stands for Complex Instruction Set
+            Computer. 2. RISC processors have simple instructions taking about one clock cycle. RISC stands for Reduced
+            Instruction Set Computer Processor, a microprocessor architecture with a simple collection and highly
+            customized set of instructions. It is built to minimize the instruction execution time by optimizing and
+            limiting the number of instructions. It means each instruction cycle requires only one clock cycle, and each
+            cycle contains three parameters: fetch, decode and execute. The RISC processor is also used to perform
+            various complex instructions by combining them into simpler ones. RISC chips require several transistors,
+            making it cheaper to design and reduce the execution time for instruction.
+        </div>
+        <div class="ques">Is RISC or CISC better?<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div class="ans">RISC microprocessors have traditionally been used in workstations and other high-end computer
+            systems, while CISC has dominated the less powerful personal computer (PC) spectrum. RISC stands for Reduced
+            Instruction Set Computer Processor, a microprocessor architecture with a simple collection and highly
+            customized set of instructions. It is built to minimize the instruction execution time by optimizing and
+            limiting the number of instructions. It means each instruction cycle requires only one clock cycle, and each
+            cycle contains three parameters: fetch, decode and execute. The RISC processor is also used to perform
+            various complex instructions by combining them into simpler ones. RISC chips require several transistors,
+            making it cheaper to design and reduce the execution time for instruction.</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+           // var id = document.getElementsByClassName('ques')
+
+            $('.ques').click(function () {
+                $(this).children(':first').toggleClass('fa-angle-down fa-angle-up')
+                $(this).next('.ans').slideToggle(500);
+                
+            })
+        });
+    </script>
+</body>
+
+</html>

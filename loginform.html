@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        $(document).raedy(function () {
+            var users = [];
+            var session = window.sessionStorage.getItem('uname');
+            if(session != null){
+                $('#signin').hide()
+                        $('#signup').hide()
+                        $('#name').text(user.name);
+                        $('#signout').show();
+            }
+            else{
+                $('#signin').show()
+                        $('#signup').show()
+                        $('#name').hide();
+                        $('#signout').hide();
+            }
+            function emptyfield(s) {
+                if(s.val() == ''){
+                    $(s).css({'border': '1px solid red'})
+                    $(this).next('.errorMsg').text('This field is required ').css({'color': 'red', 'padding': '5px'})
+                    return false
+                }
+                
+            }
+
+            function checkEmailValidation(email) {
+                $(email).blur(function(){
+		var emailvalue = $(email).val();
+		if (validateEmail(emailvalue)) 
+		{
+			$(this).css('border','1px solid green');
+			
+		} 
+		else 
+		{
+			$(this).css('border','1px solid red');
+		}
+	});
+            }
+
+            function emailValidation(email) {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+             return re.test(email);
+            }
+
+            $('.input').focus(function () {
+                $(this).next('.errorMsg').hide();
+                $(this).css({'border':'1px solid black'})
+            })
+            
+            //for signin
+            $('#signinbutton').click(function () {
+                var email = $('#email').val();
+                var password = $('#password').val();
+                var found = false;
+                var user = null;
+                emptyfield('#email');
+                emptyfield('#password');
+                checkEmailValidation('#email');
+                for (let i = 0; i < users.length; i++) {
+                    var user = users[i];
+                    if (user.email == email && user.password == password) {
+                        window.sessionStorage.setItem('uname', user.name);
+                        $('#email').val ='';
+                        $('#password').val =''
+                        found = true;
+                        break;
+                    }
+
+                    if(found == false){
+                        $('#wrong').text('invalid email and password')
+                    }
+                    else{
+                        $('#signin').hide()
+                        $('#signup').hide()
+                        $('#name').text(user.name);
+                        $('#signout').show();
+
+                    }
+                }
+            })
+
+            //for s
+
+        })
+    </script>
+</body>
+</html>

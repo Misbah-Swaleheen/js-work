@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students =" [{'name': 'Misbah', 'email': 'misbah@gmail.com','age': '23', 'course': 'Web design', 'subject': 'Computer Science', 'institute': 'Aptech', 'timing': '1-5'},{'name': 'Bisma', 'email': 'bismah@gmail.com','age': '20', 'course': 'Web development', 'subject': 'Computer Science', 'institute': 'Aptech', 'timing': '9-1'}]"
+
+        // alert(students[1].email)
+        var std_info = JSON.parse(students);
+        alert(std_info[0].name)
+    </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page1 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+
+        }
+
+        .img {
+
+            width: 25%;
+            height: 250px;
+            border: 1px solid black;
+            margin: 0% .5%;
+            padding: 0;
+        }
+
+        .img img {
+            /* background-color: black; */
+            width: 100%;
+            height: 170px;
+
+
+
+        }
+
+        .img video {
+            display: none;
+        }
+
+        .img h3 {
+            margin: 0;
+            padding: 5px 10px;
+        }
+
+        .img p {
+            margin-top: 0px;
+            padding: 0px 10px;
+        }
+
+        #pg2 {
+            height: 100vh;
+            display: none;
+        }
+
+        .page2 {
+            display: flex;
+            margin-top: 10%;
+        }
+
+        .page2 .overlay {
+            position: absolute;
+            top: 15%;
+            width: 63%;
+            height: 400px;
+            border: 1px solid blue;
+            background-color: rgba(58, 58, 58, .5);
+
+            text-align: center;
+
+        }
+
+        .page2 .overlay img {
+            width: 80px;
+            height: 80px;
+            color: white;
+            margin-top: 20%;
+
+        }
+
+        .page2 .video {
+            width: 63%;
+            height: 400px;
+
+            border: 1px solid black;
+
+        }
+
+        .page2 .overlay,
+        .page2 .video {
+            margin-left: 3%;
+
+        }
+
+        .page2 .video video {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .page2 .sug ul .list,
+        .page2 .sug ul .list1 {
+            border: 1px solid black;
+            list-style-type: none;
+            width: 370px;
+            height: 120px;
+            /* margin: .5% 1%; */
+            margin-left: -3%;
+
+        }
+
+        .page2 .sug ul .list1 {
+            margin-bottom: 8%;
+        }
+
+        .page2 .sug ul .list {
+            margin-bottom: 3%;
+        }
+
+        .page2 .sug ul .list a,
+        .page2 .sug ul .list1 a {
+            text-decoration: none;
+            width: 370px !important;
+            border: 1px solid red;
+            display: flex;
+        }
+
+        .page2 .sug ul .list a img,
+        .page2 .sug ul .list1 a img {
+            width: 170px;
+            height: 120px;
+            border: 1px solid green;
+        }
+
+        .page2 .sug ul .list a .info h4,
+        .page2 .sug ul .list1 a .info h4 {
+            margin-bottom: 5%;
+            margin-top: 8%;
+            color: black;
+        }
+
+        .page2 .sug ul .list a .info h4,
+        .page2 .sug ul .list1 a .info h4,
+        .page2 .sug ul .list a .info span,
+        .page2 .sug ul .list1 a .info span {
+
+
+            margin-left: 7%;
+            width: 100%;
+            /* display: block !important;
+            width: 200px !important; */
+        }
+
+        .page2 .sug ul .list a .info span,
+        .page2 .sug ul .list1 a .info span {
+            color: gray;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page1" id="pg1">
+
+        <div class="img">
+            <img src="Images/img1.PNG" alt="">
+            <h3>Big Buck Bunny</h3>
+            <p>25 minutes ago</p>
+            <video src="videos/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
+        </div>
+        <div class="img">
+            <img src="Images/img2.PNG" alt="">
+            <h3>Big Buck Bunny</h3>
+            <p>25 minutes ago</p>
+            <video src="videos/file_example_MP4_480_1_5MG.mp4"></video>
+        </div>
+        <div class="img">
+            <img src="Images/img1.PNG" alt="">
+            <h3>Big Buck Bunny</h3>
+            <p>25 minutes ago</p>
+            <video src="videos/Big_Buck_Bunny_1080_10s_1MB.mp4"></video>
+        </div>
+    </div>
+    <div id="pg2">
+        <div class="page2">
+            <div class="video">
+                <video src="" id="video"></video>
+            </div>
+            <div class="overlay">
+                <img src="Images/icons8-circled-play-50.png" alt="">
+            </div>
+            <div class="b-pane">
+
+            </div>
+            <div class="sug">
+                <ul>
+                    <li class="list1">
+                        <a href="">
+                            <img src="Images/img2.PNG" alt="">
+                            <div class="info">
+                                <h4 class="title">Big Buck Bunny</h4>
+                                <span class="text">CodeAcedemy</span>
+                                <span class="text">6 M Views 23 minutes ago</span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="">
+                            <img src="Images/img1.PNG" alt="">
+                            <div class="info">
+                                <h4 class="title">Big Buck Bunny</h4>
+                                <span class="text">CodeAcedemy</span>
+                                <span class="text">6 M Views 23 minutes ago</span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="">
+                            <img src="Images/img2.PNG" alt="">
+                            <div class="info">
+                                <h4 class="title">Big Buck Bunny</h4>
+                                <span class="text">CodeAcedemy</span>
+                                <span class="text">6 M Views 23 minutes ago</span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="">
+                            <img src="Images/img1.PNG" alt="">
+                            <div class="info">
+                                <h4 class="title">Big Buck Bunny</h4>
+                                <span class="text">CodeAcedemy</span>
+                                <span class="text">6 M Views 23 minutes ago</span>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="">
+                            <img src="Images/img2.PNG" alt="">
+                            <div class="info">
+                                <h4 class="title">Big Buck Bunny</h4>
+                                <span class="text">CodeAcedemy</span>
+                                <span class="text">6 M Views 23 minutes ago</span>
+
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var clicked = false;
+            $('.img').click(function () {
+                $('#pg1').hide();
+                $('#pg2').show();
+                $('#video').attr('src', $(this).children(':last').attr('src'));
+                $('.overlay img').click(function () {
+                    $('.overlay').hide()
+                    if(!clicked){
+                    video.play()
+                    clicked = true
+                }else{
+                    $( '.overlay').click(function () {
+                    video.paused ? video.play() : video.pause();
+                })
+                }
+                    
+                })
+               
+                // $( '.overlay').click(function () {
+                //     video.paused ? video.play() : video.pause();
+                // })
+               
+                $('video').mouseover(function () {
+
+                    $('.overlay').show()
+                }),
+                $('.overlay').mouseleave(function () {
+                    $('.overlay').hide()
+                })
+                
+            })
+        })
+    </script>
+</body>
+
+</html>
