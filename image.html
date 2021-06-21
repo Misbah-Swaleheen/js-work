@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images.jpg" alt="" style="display: none;">
+    <img src="download.jpg" style="display: none;">
+    <img src="download (1).jpg" alt="" style="display: none;">
+    <img src="images (1).jpg" alt="" style="display: none;">
+    <script>
+        var img = document.getElementsByTagName('img');
+        function imgOp() {
+            for (let i = 0; i < img.length; i++) {
+
+if(window.innerWidth >= "576"){
+        if (img[i].src.indexOf("download") > -1) {  
+            img[i].style.display = "block"
+        }
+        else if(img[i].src.indexOf("images") > -1){
+            img[i].style.display = "none"
+            
+        }
+    
+    }
+    else{
+        if (img[i].src.indexOf("images") > -1) {
+            img[i].style.display = "block"
+        }
+        else if(img[i].src.indexOf("download") > -1){
+            img[i].style.display = "none"
+            
+        }
+    }
+}
+  
+        }
+      window.onresize = function () {
+        imgOp()
+      } 
+       imgOp()
+    </script>
+</body>
+</html>
